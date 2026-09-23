@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | My Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-database-compat.js"></script>
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="container">
+
+        <!-- LOGIN PAGE -->
+        <section class="login-card" id="loginPage">
+
+            <div class="logo">
+                <span>G</span>
+            </div>
+
+            <h1>Welcome Back</h1>
+
+            <p class="subtitle">
+                Sign in to continue to my website
+            </p>
+
+
+            <!-- Gmail Login -->
+
+            <div class="input-group">
+
+                <label for="email">
+                    Gmail / Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your Gmail"
+                    autocomplete="email"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                id="emailLoginBtn"
+                onclick="emailLogin()"
+            >
+                Login with Gmail
+            </button>
+
+
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+
+            <!-- Google Login -->
+
+            <button
+                class="google-btn"
+                id="googleLoginBtn"
+                onclick="SignLogin()"
+            >
+
+                <span class="google-logo">
+                    G
+                </span>
+
+                <span>
+                    Continue with Google
+                </span>
+
+            </button>
+
+
+            <div class="bottom-buttons">
+
+                <button
+                    class="secondary-btn"
+                    id="signupBtn"
+                    onclick="createAccount()"
+                >
+                    Create Account
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    id="resetBtn"
+                    onclick="resetPassword()"
+                >
+                    Forgot Password
+                </button>
+
+            </div>
+
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+        </section>
+
+
+        <!-- LANDING PAGE -->
+
+        <section
+            class="landing-card"
+            id="landingPage"
+        >
+
+            <div class="success-circle">
+
+                <span>✓</span>
+
+            </div>
+
+            <h2>
+                Thank you for visit my website.
+            </h2>
+
+            <button
+                class="logout-btn"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
